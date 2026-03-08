@@ -51,15 +51,21 @@ h1{
 color:#ff4f8b;
 }
 
-</style></head><body><!-- Cadeau --><div id="gift">🎁</div><!-- Contenu anniversaire --><div id="content"><div class="card"><img src="photo.jpg"><h1>Joyeux Anniversaire 🎂</h1><p>
+</style></head><body><!-- Cadeau --><div id="gift">🎁</div><!-- Contenu anniversaire --><div id="content"><div class="card"><img src="IMG_20260304_195742_147.jpg"><h1>Joyeux Anniversaire 🎂</h1><p>
 Je te souhaite beaucoup de bonheur,<br>
 de réussite et d'amour ❤️
 </p><p>
 Que cette journée soit remplie de joie<br>
 et de beaux moments.
-</p></div></div><!-- Musique --><audio id="music">
-<source src="Happy Birthday(MP3_160K).mp3" type="audio/mpeg">
-</audio><script>
+</p></div></div><!-- Musique -->
+  <audio id="music">
+  <source src="happybirthday.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('music').play()">
+🎵 Lancer la musique
+</button>
+  <script>
 
 const gift = document.getElementById("gift");
 const content = document.getElementById("content");
