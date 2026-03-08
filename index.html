@@ -1,8 +1,5 @@
-<!DOCTYPE html><html lang="fr">
-  <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joyeux Anniversaire</title><style>
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Joyeux Anniversaire</title><style>
 
 body{
 margin:0;
@@ -17,33 +14,51 @@ color:white;
 }
 
 /* Cadeau */
+
 #gift{
-font-size:100px;
+font-size:120px;
 cursor:pointer;
 }
 
-/* Contenu caché au départ */
+/* Bouton musique */
+
+#playMusic{
+margin-top:20px;
+padding:10px 20px;
+font-size:18px;
+cursor:pointer;
+border:none;
+border-radius:10px;
+background:white;
+color:#ff4f8b;
+}
+
+/* Contenu caché */
+
 #content{
 display:none;
 }
 
 /* Carte anniversaire */
+
 .card{
 background:white;
 color:#333;
 padding:30px;
 border-radius:20px;
 max-width:400px;
+width:90%;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* Image */
+
 .card img{
-width:200px;
-height:200px;
+width:220px;
+height:220px;
 object-fit:cover;
 border-radius:50%;
-border:5px solid #ff6fa5;
+border:6px solid #ff6fa5;
 margin-bottom:20px;
 }
 
@@ -51,34 +66,40 @@ h1{
 color:#ff4f8b;
 }
 
-</style></head><body><!-- Cadeau --><div id="gift">🎁</div><!-- Contenu anniversaire --><div id="content"><div class="card"><img src="IMG_20260304_195742_147.jpg"><h1>Joyeux Anniversaire Jennifer 🎂</h1><p>
+</style></head><body><div><!-- Cadeau --><div id="gift">🎁</div><!-- Bouton musique --><button id="playMusic">Lancer la musique 🎵</button>
+
+<!-- Contenu du site --><div id="content"><div class="card"><img src="IMG_20260304_195742_147.jpg" alt="Photo"><h1>Joyeux Anniversaire 🎂</h1><p>
 Je te souhaite beaucoup de bonheur,<br>
 de réussite et d'amour ❤️
 </p><p>
-Que cette journée soit remplie de joie<br>
-et de beaux moments.
-</p></div></div><!-- Musique -->
-  <audio id="music">
-  <source src="Happy Birthday(MP3_160K).mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="document.getElementById('music').play()">
-🎵 Lancer la musique
-</button>
-  <script>
+Que cette nouvelle année de ta vie<br>
+soit remplie de joie et de beaux moments.
+</p></div></div></div><!-- Musique --><audio id="music">
+<source src="Happy Birthday(MP3_160K).mp3" type="audio/mpeg">
+</audio><script>
 
 const gift = document.getElementById("gift");
 const content = document.getElementById("content");
 const music = document.getElementById("music");
+const playBtn = document.getElementById("playMusic");
 
-gift.addEventListener("click", function(){
+/* lancer musique */
 
-gift.style.display = "none";
-content.style.display = "block";
+playBtn.addEventListener("click", function(){
 
 music.play();
 
 });
 
-</script></body>
-</html>
+/* ouvrir cadeau */
+
+gift.addEventListener("click", function(){
+
+gift.style.display = "none";
+playBtn.style.display = "none";
+
+content.style.display = "block";
+
+});
+
+</script></body></html>
