@@ -1,76 +1,77 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Joyeux Anniversaire 🎉</title>
-
-<style>
+<title>Joyeux Anniversaire</title><style>
 
 body{
-background: linear-gradient(135deg,#ff9acb,#ff6fa5);
-font-family: Arial, sans-serif;
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#ff9acb,#ff6fa5);
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-margin:0;
+text-align:center;
+color:white;
 }
 
+/* Cadeau */
+#gift{
+font-size:100px;
+cursor:pointer;
+}
+
+/* Contenu caché au départ */
+#content{
+display:none;
+}
+
+/* Carte anniversaire */
 .card{
 background:white;
-padding:40px;
+color:#333;
+padding:30px;
 border-radius:20px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
 max-width:400px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-h1{
-color:#ff4f8b;
-font-size:32px;
-}
-
-p{
-font-size:18px;
-color:#555;
-}
-
-.birthday-image{
+/* Image */
+.card img{
 width:200px;
 height:200px;
 object-fit:cover;
 border-radius:50%;
-margin-bottom:20px;
 border:5px solid #ff6fa5;
+margin-bottom:20px;
 }
 
-</style>
+h1{
+color:#ff4f8b;
+}
 
-</head>
+</style></head><body><!-- Cadeau --><div id="gift">🎁</div><!-- Contenu anniversaire --><div id="content"><div class="card"><img src="photo.jpg"><h1>Joyeux Anniversaire 🎂</h1><p>
+Je te souhaite beaucoup de bonheur,<br>
+de réussite et d'amour ❤️
+</p><p>
+Que cette journée soit remplie de joie<br>
+et de beaux moments.
+</p></div></div><!-- Musique --><audio id="music">
+<source src="Happy Birthday(MP3_160K).mp3" type="audio/mpeg">
+</audio><script>
 
-<body>
+const gift = document.getElementById("gift");
+const content = document.getElementById("content");
+const music = document.getElementById("music");
 
-<div class="card">
+gift.addEventListener("click", function(){
 
-<img src="IMG_20260304_195742_147.jpg" class="birthday-image">
+gift.style.display = "none";
+content.style.display = "block";
 
-<h1>Joyeux Anniversaire 🎂</h1>
+music.play();
 
-<p>
-Je te souhaite une journée remplie de joie,<br>
-de bonheur et de beaux moments ❤️
-</p>
+});
 
-<p>
-Que cette nouvelle année de ta vie<br>
-soit pleine de succès et d'amour.
-</p>
-
-<audio autoplay loop>
-<source src="Happy Birthday to you(MP3_160K).mp3" type="audio/mpeg">
-</audio>
-
-</div>
-
-</body>
+</script></body>
 </html>
